@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="66.666666666666671" y="41.517857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="a9l-cf-uQf">
             <objects>
-                <viewController id="0zM-pg-KIt" sceneMemberID="viewController">
+                <viewController id="0zM-pg-KIt" customClass="SignUpViewController" customModule="ToDoPostRequest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qof-Jt-rW6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-wL-lEo">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-wL-lEo">
                                 <rect key="frame" x="164.5" y="254" width="85" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="0aV-oz-1Ye"/>
@@ -117,6 +117,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1SO-qD-bIN"/>
                     </view>
+                    <connections>
+                        <outlet property="signUpButton" destination="hu1-wL-lEo" id="aCs-ow-MoN"/>
+                        <outlet property="userNameTextField" destination="rdD-Ju-hiI" id="Dye-sQ-9ee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi2-6O-kht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

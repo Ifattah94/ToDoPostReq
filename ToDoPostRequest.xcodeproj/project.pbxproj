@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		81093E1A2458A01200C2AA57 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81093E192458A01200C2AA57 /* EndPoints.swift */; };
+		81093E202458B06800C2AA57 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81093E1F2458B06800C2AA57 /* SignUpViewController.swift */; };
+		814EA0372458B2B800B5A866 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814EA0362458B2B800B5A866 /* UserDefaultsManager.swift */; };
 		819A9DC724578C87002DDCD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A9DC624578C87002DDCD6 /* AppDelegate.swift */; };
 		819A9DC924578C87002DDCD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A9DC824578C87002DDCD6 /* SceneDelegate.swift */; };
 		819A9DCE24578C87002DDCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A9DCC24578C87002DDCD6 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		81093E192458A01200C2AA57 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		81093E1F2458B06800C2AA57 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		814EA0362458B2B800B5A866 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		819A9DC324578C87002DDCD6 /* ToDoPostRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoPostRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A9DC624578C87002DDCD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		819A9DC824578C87002DDCD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				819A9DDC24578E90002DDCD6 /* TasksTableViewController.swift */,
+				81093E1F2458B06800C2AA57 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -80,6 +85,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		814EA0352458B29F00B5A866 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				814EA0362458B2B800B5A866 /* UserDefaultsManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		819A9DBA24578C87002DDCD6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		819A9DC524578C87002DDCD6 /* ToDoPostRequest */ = {
 			isa = PBXGroup;
 			children = (
+				814EA0352458B29F00B5A866 /* Persistence */,
 				81093E1B2458A76200C2AA57 /* Model */,
 				81093E1C2458A77200C2AA57 /* Controller */,
 				81093E1E2458A91300C2AA57 /* API */,
@@ -184,8 +198,10 @@
 			files = (
 				819A9DDF24578F8A002DDCD6 /* TaskAPIManager.swift in Sources */,
 				819A9DDB24578CC9002DDCD6 /* Task.swift in Sources */,
+				81093E202458B06800C2AA57 /* SignUpViewController.swift in Sources */,
 				819A9DE124579171002DDCD6 /* AppError.swift in Sources */,
 				81093E1A2458A01200C2AA57 /* EndPoints.swift in Sources */,
+				814EA0372458B2B800B5A866 /* UserDefaultsManager.swift in Sources */,
 				819A9DC724578C87002DDCD6 /* AppDelegate.swift in Sources */,
 				819A9DDD24578E90002DDCD6 /* TasksTableViewController.swift in Sources */,
 				819A9DC924578C87002DDCD6 /* SceneDelegate.swift in Sources */,
