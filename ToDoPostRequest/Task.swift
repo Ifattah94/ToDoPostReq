@@ -1,0 +1,20 @@
+//
+//  Task.swift
+//  ToDoPostRequest
+//
+//  Created by C4Q on 4/27/20.
+//  Copyright © 2020 Iram Fattah. All rights reserved.
+//
+
+import Foundation
+
+struct TaskResponse: Codable {
+    let payload: [Task]
+}
+
+struct Task: Codable {
+    let id: String
+    let owner: String
+    let text: String
+    let completed: Bool 
+}
