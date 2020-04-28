@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81093E1A2458A01200C2AA57 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81093E192458A01200C2AA57 /* EndPoints.swift */; };
 		819A9DC724578C87002DDCD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A9DC624578C87002DDCD6 /* AppDelegate.swift */; };
 		819A9DC924578C87002DDCD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A9DC824578C87002DDCD6 /* SceneDelegate.swift */; };
 		819A9DCE24578C87002DDCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819A9DCC24578C87002DDCD6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81093E192458A01200C2AA57 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		819A9DC324578C87002DDCD6 /* ToDoPostRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoPostRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A9DC624578C87002DDCD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		819A9DC824578C87002DDCD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				819A9DDC24578E90002DDCD6 /* TasksTableViewController.swift */,
 				819A9DDE24578F8A002DDCD6 /* TaskAPIManager.swift */,
 				819A9DE024579171002DDCD6 /* AppError.swift */,
+				81093E192458A01200C2AA57 /* EndPoints.swift */,
 			);
 			path = ToDoPostRequest;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				819A9DDF24578F8A002DDCD6 /* TaskAPIManager.swift in Sources */,
 				819A9DDB24578CC9002DDCD6 /* Task.swift in Sources */,
 				819A9DE124579171002DDCD6 /* AppError.swift in Sources */,
+				81093E1A2458A01200C2AA57 /* EndPoints.swift in Sources */,
 				819A9DC724578C87002DDCD6 /* AppDelegate.swift in Sources */,
 				819A9DDD24578E90002DDCD6 /* TasksTableViewController.swift in Sources */,
 				819A9DC924578C87002DDCD6 /* SceneDelegate.swift in Sources */,

@@ -14,10 +14,12 @@ class TaskAPIManager {
     
     static let shared = TaskAPIManager()
     
-    private var baseURLStr: String = "https://fsw62-todos-api.herokuapp.com/api/todos"
+    private let baseURLStr: String = "https://fsw62-todos-api.herokuapp.com/api"
     
     func getAllTasks(completion: @escaping (Result <[Task], AppError>) -> Void) {
-        guard let url = URL(string: baseURLStr) else {
+        let completeURL = baseURLStr + EndPoints.ToDos.rawValue
+        
+        guard let url = URL(string: completeURL) else {
             completion(.failure(.badURL))
             return
         }
@@ -37,6 +39,7 @@ class TaskAPIManager {
             }
         }.resume()
     }
+    
     
     
 }

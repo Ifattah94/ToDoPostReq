@@ -10,11 +10,13 @@ import Foundation
 
 struct TaskResponse: Codable {
     let payload: [Task]
+    let err: Bool
+  
 }
 
 struct Task: Codable {
     let id: String
     let owner: String
     let text: String
-    let completed: Bool 
+    let completed: Bool
 }
