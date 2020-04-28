@@ -12,5 +12,6 @@ enum AppError: Error {
     case badURL
     case DecodingError(error: Error)
     case noData
-    
+    case EncodingError(error: Error)
+    case errorGettingData(error: Error)
 }

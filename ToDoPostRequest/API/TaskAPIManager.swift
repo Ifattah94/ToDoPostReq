@@ -14,6 +14,7 @@ class TaskAPIManager {
     
     static let shared = TaskAPIManager()
     
+    //MARK: GET ALL TASKS
     private let baseURLStr: String = "https://fsw62-todos-api.herokuapp.com/api"
     
     func getAllTasks(completion: @escaping (Result <[Task], AppError>) -> Void) {
@@ -39,4 +40,51 @@ class TaskAPIManager {
             }
         }.resume()
     }
+    
+    //MARK: Sign Up
+    
+    func signUp(user: User,completion: @escaping(Result <(), AppError>) -> Void) {
+        let completeURLStr = self.baseURLStr + EndPoints.SignUp.rawValue
+        guard let url = URL(string: completeURLStr) else {
+            completion(.failure(.badURL))
+            return
+        }
+        var data: Data?
+        
+        do {
+            let encodedData = try JSONEncoder().encode(user)
+            data = encodedData
+        } catch {
+            completion(.failure(.EncodingError(error: error)))
+        }
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = data
+        
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                completion(.failure(.errorGettingData(error: error)))
+            }
+            
+            guard let _ = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            completion(.success(()))
+            
+        }.resume()
+    }
+    
+    
+    
+    
+    
+    
+    
 }

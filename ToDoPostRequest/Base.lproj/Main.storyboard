@@ -57,7 +57,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3fa-Di-1bE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uRV-4P-tAr" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TasksNavController" automaticallyAdjustsScrollViewInsets="NO" id="uRV-4P-tAr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9zd-HC-aQI">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -104,6 +104,9 @@
                                     <constraint firstAttribute="height" constant="40" id="AUs-4j-HHx"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="0zM-pg-KIt" eventType="touchUpInside" id="ATS-GU-zcO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
