@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,6 +71,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0i-Tv-IEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="66.666666666666671" y="41.517857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a9l-cf-uQf">
+            <objects>
+                <viewController id="0zM-pg-KIt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qof-Jt-rW6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdD-Ju-hiI">
+                                <rect key="frame" x="117" y="150" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="uYB-4y-AIs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Username To Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7b-5f-jq2">
+                                <rect key="frame" x="53.5" y="68" width="307" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="7Uk-oE-gik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-wL-lEo">
+                                <rect key="frame" x="164.5" y="254" width="85" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="0aV-oz-1Ye"/>
+                                    <constraint firstAttribute="height" constant="40" id="AUs-4j-HHx"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hu1-wL-lEo" firstAttribute="centerX" secondItem="qof-Jt-rW6" secondAttribute="centerX" id="8uP-xC-kg5"/>
+                            <constraint firstItem="t7b-5f-jq2" firstAttribute="top" secondItem="1SO-qD-bIN" secondAttribute="top" constant="24" id="ADx-aD-P6s"/>
+                            <constraint firstItem="rdD-Ju-hiI" firstAttribute="top" secondItem="t7b-5f-jq2" secondAttribute="bottom" constant="50" id="F2L-bv-fAm"/>
+                            <constraint firstItem="hu1-wL-lEo" firstAttribute="top" secondItem="rdD-Ju-hiI" secondAttribute="bottom" constant="70" id="J9V-HI-TJb"/>
+                            <constraint firstItem="t7b-5f-jq2" firstAttribute="centerX" secondItem="qof-Jt-rW6" secondAttribute="centerX" id="KGL-bF-nns"/>
+                            <constraint firstItem="rdD-Ju-hiI" firstAttribute="centerX" secondItem="qof-Jt-rW6" secondAttribute="centerX" id="jIl-Bf-R1k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1SO-qD-bIN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fi2-6O-kht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="744.64285714285711"/>
         </scene>
     </scenes>
 </document>
