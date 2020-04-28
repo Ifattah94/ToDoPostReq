@@ -45,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81093E1B2458A76200C2AA57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				819A9DDA24578CC9002DDCD6 /* Task.swift */,
+				81093E192458A01200C2AA57 /* EndPoints.swift */,
+				819A9DE024579171002DDCD6 /* AppError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81093E1C2458A77200C2AA57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				819A9DDC24578E90002DDCD6 /* TasksTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81093E1D2458A7A500C2AA57 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				819A9DCF24578C88002DDCD6 /* Assets.xcassets */,
+				819A9DD124578C88002DDCD6 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		819A9DBA24578C87002DDCD6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +91,14 @@
 		819A9DC524578C87002DDCD6 /* ToDoPostRequest */ = {
 			isa = PBXGroup;
 			children = (
+				81093E1B2458A76200C2AA57 /* Model */,
+				81093E1C2458A77200C2AA57 /* Controller */,
 				819A9DC624578C87002DDCD6 /* AppDelegate.swift */,
 				819A9DC824578C87002DDCD6 /* SceneDelegate.swift */,
 				819A9DCC24578C87002DDCD6 /* Main.storyboard */,
-				819A9DCF24578C88002DDCD6 /* Assets.xcassets */,
-				819A9DD124578C88002DDCD6 /* LaunchScreen.storyboard */,
+				81093E1D2458A7A500C2AA57 /* Supporting */,
 				819A9DD424578C88002DDCD6 /* Info.plist */,
-				819A9DDA24578CC9002DDCD6 /* Task.swift */,
-				819A9DDC24578E90002DDCD6 /* TasksTableViewController.swift */,
 				819A9DDE24578F8A002DDCD6 /* TaskAPIManager.swift */,
-				819A9DE024579171002DDCD6 /* AppError.swift */,
-				81093E192458A01200C2AA57 /* EndPoints.swift */,
 			);
 			path = ToDoPostRequest;
 			sourceTree = "<group>";
