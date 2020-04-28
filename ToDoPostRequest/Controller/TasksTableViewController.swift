@@ -31,10 +31,10 @@ class TasksTableViewController: UITableViewController {
     //MARK: API
     
     private func loadData() {
-        TaskAPIManager.shared.getAllTasks { (result) in
+        TaskAPIManager.shared.getAllTasks {[weak self] (result) in
             switch result {
             case .success(let tasks):
-                self.tasks = tasks
+                self?.tasks = tasks
             case .failure(let error):
                 print(error)
             }
@@ -62,6 +62,20 @@ class TasksTableViewController: UITableViewController {
         cell.detailTextLabel?.text = task.owner
         return cell
     }
+    
+    
+    
+    //MARK: Actions
+    
+    @IBAction func AddButtonPressed(_ sender: UIBarButtonItem) {
+        
+        
+        
+        
+        
+        
+    }
+    
     
 
 }

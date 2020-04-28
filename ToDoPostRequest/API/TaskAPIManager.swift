@@ -66,17 +66,21 @@ class TaskAPIManager {
         
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            if let error = error {
-                completion(.failure(.errorGettingData(error: error)))
+            DispatchQueue.main.async {
+                
+                
+                
+                if let error = error {
+                    completion(.failure(.errorGettingData(error: error)))
+                }
+                
+                guard let _ = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                completion(.success(()))
             }
-            
-            guard let _ = data else {
-                completion(.failure(.noData))
-                return
-            }
-            
-            completion(.success(()))
             
         }.resume()
     }
