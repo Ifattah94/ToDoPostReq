@@ -68,8 +68,6 @@ class TaskAPIManager {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 
-                
-                
                 if let error = error {
                     completion(.failure(.errorGettingData(error: error)))
                 }
@@ -87,7 +85,45 @@ class TaskAPIManager {
     
     
     
-    
+    func addTask(task: Task, completion: @escaping(Result <(), AppError>) -> Void) {
+        let completeURLStr = self.baseURLStr + EndPoints.ToDos.rawValue
+        guard let url = URL(string: completeURLStr) else {
+            completion(.failure(.badURL))
+            return
+        }
+        var data: Data?
+        
+        do {
+            let encodedData = try JSONEncoder().encode(task)
+            data = encodedData
+        } catch {
+            completion(.failure(.EncodingError(error: error)))
+        }
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = data
+        
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                
+                if let error = error {
+                    completion(.failure(.errorGettingData(error: error)))
+                }
+                
+                guard let _ = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                completion(.success(()))
+            }
+            
+        }.resume()
+    }
     
     
     

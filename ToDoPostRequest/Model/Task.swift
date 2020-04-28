@@ -15,7 +15,6 @@ struct TaskResponse: Codable {
 }
 
 struct Task: Codable {
-    let id: String
     let owner: String
     let text: String
     let completed: Bool

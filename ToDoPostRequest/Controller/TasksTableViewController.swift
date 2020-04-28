@@ -18,6 +18,7 @@ class TasksTableViewController: UITableViewController {
         }
     }
     
+    
     //MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -69,10 +70,35 @@ class TasksTableViewController: UITableViewController {
     
     @IBAction func AddButtonPressed(_ sender: UIBarButtonItem) {
         
+        let alertController = UIAlertController(title: "Add Task", message: "TO Do", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Task"
+            
+            let okAction = UIAlertAction(title: "OK", style: .default) { [weak self](action) in
+                guard let text = alertController.textFields?[0].text, let userName = UserDefaultsManager.shared.getUserName() else {return}
+                let taskToBeAdded = Task(owner: userName, text: text, completed: false)
+                
+                TaskAPIManager.shared.addTask(task: taskToBeAdded) { (result) in
+                    switch result {
+                    case .success(()):
+                        print("posted task!")
+                        self?.loadData()
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+                
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+        }
         
         
-        
-        
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

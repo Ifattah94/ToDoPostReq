@@ -44,11 +44,11 @@ class SignUpViewController: UIViewController {
         
         let user = User(username: text)
         
-        TaskAPIManager.shared.signUp(user: user) { (result) in
+        TaskAPIManager.shared.signUp(user: user) {[weak self] (result) in
                 switch result {
                 case .success(()):
                     let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TasksNavController")
-                    self.present(vc, animated: true, completion: {
+                    self?.present(vc, animated: true, completion: {
                         UserDefaultsManager.shared.setUserName(userName: text)
                     })
                 case .failure(let error):
